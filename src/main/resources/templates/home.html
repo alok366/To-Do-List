@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link media="screen and (min-width: 769px)" th:href="@{css/navbar.css}" rel="stylesheet" type="text/css"/>
+    <link media="screen and (max-width: 768px)" th:href="@{css/navmobile.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{css/home.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{css/bg.css}" rel="stylesheet" type="text/css"/>
+    <script th:src="@{js/menu.js}" defer></script>
+    <link rel="icon" type="image/png" th:href="@{images/list.png}">
+</head>
+<body>
+    <div th:replace="~{fragments :: header}"></div>
+    <main>
+        <div th:replace="~{fragments :: add}"></div>
+        <div class="background">
+            <h1>Manage your task efficiently</h1>
+        </div>
+    </main>
+</body>
+</html>

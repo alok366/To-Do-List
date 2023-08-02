@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>To Do List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link media="screen and (min-width: 769px)" th:href="@{css/navbar.css}" rel="stylesheet" type="text/css" />
+  <link media="screen and (max-width: 768px)" th:href="@{css/navmobile.css}" rel="stylesheet" type="text/css"/>
+  <link th:href="@{css/userdetailsform.css}" rel="stylesheet" type="text/css"/>
+  <link th:href="@{css/main.css}" rel="stylesheet" type="text/css"/>
+  <link th:href="@{css/bg.css}" rel="stylesheet" type="text/css"/>
+  <script th:src="@{js/menu.js}" defer></script>
+  <link rel="icon" type="image/png" th:href="@{images/list.png}">
+</head>
+
+<body>
+  <div th:replace="~{fragments :: header}"></div>
+  <main>
+    <h1>Register</h1>
+    <form method="POST" th:action="@{/register}" id="registerForm">
+
+      <label for="username">Username: </label>
+      <input class="userdetails" type="text" name="username" required /><br />
+
+      <label for="password">Password: </label>
+      <input class="userdetails" type="password" name="password" required/><br />
+
+      <label for="confirm">Confirm password: </label>
+      <input class="userdetails" type="password" name="confirm" required/><br />
+
+      <label for="fullname">Full name: </label>
+      <input class="userdetails" type="text" name="fullname" required/><br />
+
+      <label for="email">Email: </label>
+      <input class="userdetails" type="email" name="email" required/><br />
+
+      <input class="userdetails submit-button" type="submit" value="Register" />
+    </form>
+  </main>
+</body>
+
+</html>

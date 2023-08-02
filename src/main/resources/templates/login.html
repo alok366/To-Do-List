@@ -1,0 +1,44 @@
+<!-- tag::all[] -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>To Do List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link media="screen and (min-width: 769px)" th:href="@{css/navbar.css}" rel="stylesheet" type="text/css" />
+  <link media="screen and (max-width: 768px)" th:href="@{css/navmobile.css}" rel="stylesheet" type="text/css"/>
+  <link th:href="@{css/main.css}" rel="stylesheet" type="text/css"/>
+  <link th:href="@{css/userdetailsform.css}" rel="stylesheet" type="text/css"/>
+  <link th:href="@{css/bg.css}" rel="stylesheet" type="text/css"/>
+  <script th:src="@{js/menu.js}" defer></script>
+  <link rel="icon" type="image/png" th:href="@{images/list.png}">
+</head>
+
+
+<body>
+  <div th:replace="~{fragments :: header}"></div>
+  <main>
+    <h1>Login</h1>
+
+    <div th:if="${error}">
+      Unable to login. Check your username and password.
+    </div>
+
+    <p>New here? Click
+      <a th:href="@{/register}">here</a> to register.
+    </p>
+
+    <form method="POST" th:action="@{/login}" id="loginForm">
+      <label for="username">Username: </label>
+      <input class="userdetails" type="text" name="username" id="username" /><br />
+
+      <label for="password">Password: </label>
+      <input class="userdetails" type="password" name="password" id="password" /><br />
+
+      <input class="userdetails submit-button" type="submit" value="Login"  />
+    </form>
+  </main>
+</body>
+
+</html>

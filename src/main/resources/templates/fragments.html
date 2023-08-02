@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+
+<body>
+
+    <!-- Header fragment -->
+    <header th:fragment="header">
+        <div class="logo">
+            <img id="logo" th:src="@{images/list.png}" alt="task logo">
+            <h2>To Do List</h2>
+        </div>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a class="navbutton" th:href="@{/default}" th:text="Default"></a></li>
+                <li><a class="navbutton" th:href="@{/personal}" th:text="Personal"></a></li>
+                <li><a class="navbutton" th:href="@{/shopping}" th:text="Shopping"></a></li>
+                <li><a class="navbutton" th:href="@{/work}" th:text="Work"></a></li>
+                <li><a class="navbutton" th:href="@{/finished}" th:text="Finished"></a></li>
+
+                <li>
+                    <a sec:authorize="isAnonymous()" class="navbutton" th:href="@{/login}" th:text="Login"></a>
+                    <a sec:authorize="isAuthenticated()" class="navbutton" th:href="@{/logout}" th:text="Logout"></a>
+                </li>
+            </ul>
+            <form th:action="@{/search}" method="get">
+                <input type="text" name="query" placeholder="Search tasks..." />
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+        <nav class="nav-mobile">
+            <div class="searchandlog">
+                <form th:action="@{/search}" method="get">
+                    <input type="text" name="query" placeholder="Search tasks..." />
+                    <button type="submit">Search</button>
+                </form>
+                <div>
+                    <a class="navbutton" sec:authorize="isAnonymous()"  th:href="@{/login}" th:text="Login"></a>
+                    <a class="navbutton" sec:authorize="isAuthenticated()"  th:href="@{/logout}" th:text="Logout"></a>
+                </div> 
+            </div>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu">
+                    <li><a class="navbutton" th:href="@{/default}" th:text="Default"></a></li>
+                    <li><a class="navbutton" th:href="@{/personal}" th:text="Personal"></a></li>
+                    <li><a class="navbutton" th:href="@{/shopping}" th:text="Shopping"></a></li>
+                    <li><a class="navbutton" th:href="@{/work}" th:text="Work"></a></li>
+                    <li><a class="navbutton" th:href="@{/finished}" th:text="Finished"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div th:fragment="add" class="add-button-container">
+        <a th:href="@{/add}" class="add-button">
+            <button class="circle">
+                <div class="line-wrapper">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </div>
+            </button>
+            <p class="add-title">Add Task</p>
+        </a>
+    </div>
+    <!-- Footer fragment -->
+    <div th:fragment="footer">
+        <footer>
+        </footer>
+    </div>
+
+</body>
+
+</html>

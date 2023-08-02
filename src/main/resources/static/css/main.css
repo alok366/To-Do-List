@@ -1,0 +1,86 @@
+@media screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+      }
+      body {
+        position: relative
+      }
+  }
+main
+{
+    text-align: center;
+}
+.task-container {
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.task-item {
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-title {
+    flex: 1;
+    margin: 0;
+    font-size: 24px;
+}
+
+.task-details {
+    flex: 3;
+    margin-left: 20px;
+}
+
+.task-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.task-details p:last-child {
+    font-weight: bold;
+}
+
+.task-status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.overdue {
+    background-color: #ff6666;
+}
+
+.ontime {
+    background-color: #66cc66;
+}
+
+.task-details>form {
+    display: inline-block;
+}
+
+input[type="checkbox"] {
+    margin-right: 50px;
+    margin-left: 50px;
+    transform: scale(2.0);
+}
+
+.no-tasks {
+    text-align: center;
+    color: #999;
+}
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-bottom: 5px; 
+}
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link media="screen and (min-width: 769px)" th:href="@{css/navbar.css}" rel="stylesheet" type="text/css"/>
+    <link media="screen and (max-width: 768px)" th:href="@{css/navmobile.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{css/userdetailsform.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{css/main.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{css/bg.css}" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/png" th:href="@{images/list.png}">
+    <script th:src="@{js/menu.js}" defer></script>
+</head>
+<body>
+    <div th:replace="~{fragments :: header}"></div>
+    <main>
+        <form th:method="POST" th:object="${task}" th:action="@{/add}" id="addForm">
+            <label for="title">Title:</label>
+    
+            <input class="userdetails" type="text" id="title" th:field="*{title}"/>
+            <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" >Title Error</span>
+            <br>
+    
+    
+            <label for="description">Description:</label>
+            <textarea class="userdetails" id="description" rows="4" th:field="*{description}" >
+    
+            </textarea>
+            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Description Error</span>
+            <br>
+    
+            <label for="dueDate">Due Date:</label>
+            <input class="userdetails" type="datetime-local" id="dueDate" th:field="*{dueDate}" required/><br>
+            <span th:if="${#fields.hasErrors('dueDate')}" th:errors="*{dueDate}">DateTime Error</span>
+    
+            <label for="type">Type:</label>
+            <select class="userdetails" id="type" th:field="*{type}">
+                <option th:value="DEFAULT">Default</option>
+                <option th:value="PERSONAL">Personal</option>
+                <option th:value="SHOPPING">Shopping</option>
+                <option th:value="WORK">Work</option>
+            </select><br>
+    
+            <input class="userdetails submit-button" type="submit" value="Add Task" />
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@media screen and (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+.searchandlog
+{
+  display: flex;
+}
+#empty
+{
+  width: 30%;
+}
+#logo
+{
+  width: 20%;
+}
+nav {
+  background-image: linear-gradient(to bottom, #f4f4f4, #d9d9d9);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 8px rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchandlog>form {
+  flex: 3;
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  margin: 2px;
+}
+.searchandlog>div
+{
+  flex:1;
+}
+.searchandlog>form>input {
+  background-color: transparent;
+  flex: 1;
+  border: 0;
+}
+
+.searchandlog>form>button {
+  background-color: grey;
+  flex: 1;
+  border: 0;
+  border-end-end-radius: 18px;
+  border-start-end-radius: 18px;
+}
+
+nav>form>button:hover {
+  background-color: #b3b3b3;
+  /* Darker color on hover */
+}
+
+nav>form>button:active {
+  background-color: #464646;
+  /* Even darker color on button press */
+}
+
+#hamburger-icon {
+  margin-left: 15px;
+  display: block;
+  cursor: pointer;
+  flex: 1;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-start;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.navbutton
+{
+    outline: none;
+    color:#686868 ;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.navbutton:link,
+.navbutton:visited,
+.navbutton:focus {
+  color: #686868;
+}
+
+.navbutton:hover {
+  background:  #b3b3b3;
+  color: #ac0000;
+}
+
+.navbutton:active {
+  background: darkred;
+  color: white;
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo>h2
+{
+    margin:0;
+}

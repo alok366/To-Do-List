@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    /* Set the background image */
+    background-image: url("../images/project.svg");
+    background-size: contain;
+    /* Adjust the height and width as needed */
+    height: 70vh;
+    width: 100%;
+    /* Center the background image and make it cover the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Display flex to vertically center the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /* Add some transparency to the background image (optional) */
+    opacity: 0.9;
+    /* Set the color of the text */
+    color: white;
+    /* Set the font size and padding for the text */
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+    .background {
+      /* Adjust the height for mobile devices */
+      height: 50vh;
+      /* Set the font size and padding for mobile devices */
+      font-size: 1.5rem;
+      padding-bottom: 20px;
+      /* Remove the opacity effect for better visibility on smaller screens */
+      opacity: 1;
+    }
+  }

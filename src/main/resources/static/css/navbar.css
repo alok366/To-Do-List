@@ -1,0 +1,96 @@
+@media screen and (min-width: 769px) {
+  .nav-desktop {
+      display: flex;
+  }
+  .nav-mobile {
+      display: none;
+  }
+}
+#empty
+{
+  width: 10%;
+}
+nav
+{
+    background-image: linear-gradient(to bottom, #f4f4f4, #d9d9d9);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 8px rgba(0, 0, 0, 0.4);
+    margin:5px;
+}
+#logo
+{
+  width: 5%;
+}
+nav>form
+{
+    flex:1;
+    display: flex;
+    background-color: white;
+    border-radius: 18px;
+    margin: 4px;
+}
+nav>form>input {
+    background-color:transparent;
+    flex:1;
+    border:0;
+}
+nav>form>button
+{
+    background-color: grey;
+    flex:1;
+    border:0;
+    border-end-end-radius: 18px;
+    border-start-end-radius: 18px;
+}
+nav>form > button:hover {
+    background-color: #b3b3b3; /* Darker color on hover */
+  }
+  
+nav>form > button:active {
+    background-color: #464646; /* Even darker color on button press */
+  }
+nav>ul
+{
+    flex:4;
+    list-style-type: none;
+    display: flex;
+    margin:0;
+    padding: 0;
+}
+nav>ul>li
+{
+    flex:1;
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo>h2
+{
+    margin:0;
+}
+.navbutton
+{
+    outline: none;
+    color:#686868 ;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 12px;
+}
+.navbutton:link,
+.navbutton:visited,
+.navbutton:focus {
+  color: #686868;
+}
+
+.navbutton:hover {
+  background:  #b3b3b3;
+  color: #ac0000;
+}
+
+.navbutton:active {
+  background: darkred;
+  color: white;
+}
