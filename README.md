@@ -16,12 +16,12 @@ This project is a task management system developed using Spring Boot. It allows 
 
 ## Demo
 
-![Screenshot](https://ibb.co/YLyfKn1)
-![Screenshot](https://ibb.co/6XFRfS1)
-![Screenshot](https://ibb.co/rc2ZCtZ)
-![Screenshot](https://ibb.co/4JL0vhK)
-![Screenshot](https://ibb.co/y4GQLqV)
-![Screenshot](https://ibb.co/9q3DFdz)
+![Screenshot](https://i.ibb.co/0GFYW46/Screenshot-2024-02-20-194817.png)
+![Screenshot](https://i.ibb.co/RjcpVKB/Screenshot-2024-02-20-194827.png)
+![Screenshot](https://i.ibb.co/0FyfgXf/Screenshot-2024-02-20-195157.png)
+![Screenshot](https://i.ibb.co/523JpbG/Screenshot-2024-02-20-195250.png)
+![Screenshot](https://i.ibb.co/WVq2Sfs/Screenshot-2024-02-20-195308.png)
+![Screenshot](https://i.ibb.co/2jY9Dpm/Screenshot-2024-02-20-195314.png)
 
 
 ## Installation
